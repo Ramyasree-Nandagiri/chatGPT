@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "id": "Hi",
+            "data": "Welcome to ChatBot. How may I help you?"
+        },
+        {
+            "id": "What is Angular",
+            "data": "Angular is client side scripting language"
+        }
+    ]
+}

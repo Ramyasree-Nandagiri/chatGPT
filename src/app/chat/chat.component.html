@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col-sm-6">
+     
+        <div *ngIf="message.length===0 else dialogInfo"> </div>
+        <input [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text" class="form-control" />
+        <button class="btn btn-primary mt-3" (click)="sendMessage()">Ask Bot</button>
+        <ng-template #dialogInfo>Total Message Length {{message.length}}</ng-template>
+        <div *ngFor="let msg of message">
+            <div class="float-left"></div>  
+            <p>{{msg.value}}</p> 
+           </div>
+    </div>
+</div>
+
+<div class="col-sm-6">
+     
+
+    <input [(ngModel)]="getData" type="text" class="form-control" />
+    <button class="btn btn-secondary mt-3" (click)="sendData()">Ask Bot</button>
+
+   <div>{{finalResult}} This is final Result</div>
+
+   <ul *ngFor="let b of finalResult">
+       <li>{{b}} This is final Result</li>
+   </ul>
+
+   <!-- <p>{{finalResult}}</p> -->
+
+</div>
